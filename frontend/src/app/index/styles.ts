@@ -302,6 +302,7 @@ export const styles = StyleSheet.create({
         top: 0,
         alignItems: 'center',
         flexDirection: 'row',
+        justifyContent: 'space-between',
         paddingHorizontal: 25,
         height: 70,
         width: 300,
@@ -311,9 +312,7 @@ export const styles = StyleSheet.create({
     },
 
     baia_selecionada: {
-        flexDirection: 'column',
-        paddingRight: 60,
-        paddingLeft: 20
+        flexDirection: 'column'
     },
 
     container_pai_home: {
@@ -346,7 +345,7 @@ export const styles = StyleSheet.create({
     },
 
     tabs_container: {
-        paddingTop: 45,
+        padding: 45,
         gap: 15
     },
 
@@ -406,8 +405,9 @@ export const styles = StyleSheet.create({
         fontWeight: '800',
         fontSize: 16,
         letterSpacing: 0.5,
-        color: colors.gray[100],
-        paddingLeft: 20
+        color: colors.gray[150],
+        paddingLeft: 20,
+
     },
 
     config_icon: {
@@ -468,9 +468,9 @@ export const styles = StyleSheet.create({
         fontWeight: '800',
         fontSize: 16,
         letterSpacing: 0.5,
-        color: colors.gray[100],
+        color: colors.gray[150],
         paddingTop: 10,
-        paddingBottom: 60,
+        paddingBottom: 50,
         textShadowOffset: { width: 0, height: 2 },
         textShadowColor: colors.gray[800],
         textShadowRadius: 4
@@ -511,8 +511,37 @@ export const styles = StyleSheet.create({
     option_box_text: {
         fontFamily: 'Rubik',
         fontWeight: '800',
-        fontSize: 10,
+        fontSize: 12,
         color: colors.gray[750]
+    },
+
+    config_item: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+
+    config_open_icon: {
+        width: 5,
+        height: 10,
+        transform: [{ rotateX: '180deg' }, { rotateZ: '180deg' }]
+    },
+
+    // Sensor
+
+    sensor_tab_color2: {
+        position: 'absolute',
+        top: -15,
+        right: -5,
+        backgroundColor: colors.ui[400],
+        height: 155,
+        width: 310,
+        transform: [{ rotate: '-5deg' }]
+    },
+
+    sensor_text_container: {
+        gap: 20,
+        alignContent: 'center'
     }
 
 })

@@ -11,13 +11,15 @@ export default function Home() {
             style={styles.backgroundImage_select}>
             <StatusBar hidden={true} />
             <View style={styles.baia_menu}>
-                <Link href={'../select'}><Image style={{ width: 10, height: 18 }} source={require('../../../assets/icons/back.png')} /></Link>
-                <View style={styles.baia_selecionada}>
-                    <View style={{ flexDirection: 'row', gap: 4 }}>
-                        <Text style={styles.baia_name}>Baia 1</Text>
-                        <View style={styles.dot_online} />
+                <View style={{ flexDirection: 'row', gap: 15, alignItems: 'center' }}>
+                    <Link href={'../select'}><Image style={{ width: 10, height: 18, padding: 5 }} source={require('../../../assets/icons/back.png')} /></Link>
+                    <View style={styles.baia_selecionada}>
+                        <View style={{ flexDirection: 'row', gap: 4 }}>
+                            <Text style={styles.baia_name}>Baia 1</Text>
+                            <View style={styles.dot_online} />
+                        </View>
+                        <Text style={styles.baia_ip}>IP: 000.121.123</Text>
                     </View>
-                    <Text style={styles.baia_ip}>IP: 000.121.123</Text>
                 </View>
                 <Image style={{ width: 26, height: 32 }} source={require('../../../assets/icons/pot.png')} />
             </View>
