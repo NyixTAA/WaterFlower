@@ -29,8 +29,7 @@ export default function Home() {
             <View style={styles.container_pai_home}>
                 <View style={styles.container_flower_home}>
                     <Image
-                        source={require('../../../assets/images/icon.png')} style={styles.flower_2} resizeMode='contain'
-                    />
+                        source={require('../../../assets/images/icon.png')} style={styles.flower_2} resizeMode='contain' />
                     <Text style={styles.title_home}>Gerencie a <Text style={styles.sub_home}>Baia 1</Text></Text>
                 </View>
             </View>
@@ -38,7 +37,9 @@ export default function Home() {
                 <View style={{ flexDirection: 'row', gap: 15 }}>
                     <View style={styles.config_tab2}>
                         <View style={styles.config_tab_color2} />
-                        <Image style={styles.backicon} source={require('../../../assets/icons/backalt.png')} />
+                        <Link style={styles.backicon} href={'../homepage'}>
+                            <Image source={require('../../../assets/icons/backalt.png')} />
+                        </Link>
                         <View style={{ alignItems: 'center' }}>
                             <Image style={styles.config_icon} source={require('../../../assets/icons/config.png')} />
                             <Text style={styles.config_text2}>Configurações</Text>

@@ -50,18 +50,29 @@ export const styles = StyleSheet.create({
         fontFamily: 'Rubik',
         fontSize: 13,
         fontWeight: '300',
+        color: colors.gray[150],
+        width: 160,
+        textAlign: 'center',
+        opacity: 0.8,
+        position: 'absolute',
+        bottom: 200
+    },
+
+    brief2: {
+        fontFamily: 'Rubik',
+        fontSize: 13,
+        fontWeight: '300',
         color: colors.gray[100],
         width: 160,
         textAlign: 'center',
         opacity: 0.8,
         position: 'absolute',
-        bottom: 0,
-        paddingBottom: 90
+        bottom: 90
     },
 
     link: {
-        height: 200,
-        width: 200
+        height: 500,
+        width: 1000
     },
 
     watermark: {
@@ -127,6 +138,12 @@ export const styles = StyleSheet.create({
 
     //Selecionar Baia---------------------------
 
+    absoluteBackIcon: {
+        position: 'absolute',
+        left: 20,
+        top: 95,
+    },
+
     title_container: {
         alignItems: 'center'
     },
@@ -167,10 +184,9 @@ export const styles = StyleSheet.create({
 
     baia: {
         height: 75,
-        width: 255,
-        backgroundColor: colors.gray[100],
-        borderTopLeftRadius: 8,
-        borderBottomLeftRadius: 8,
+        width: 312,
+        backgroundColor: colors.gray[150],
+        borderRadius: 8,
         alignItems: 'center',
         gap: 5,
         padding: 15,
@@ -214,21 +230,6 @@ export const styles = StyleSheet.create({
     ins_baia: {
         flexDirection: 'column',
         justifyContent: 'center'
-    },
-
-    edit: {
-        height: 75,
-        width: 55,
-        backgroundColor: colors.gray[100],
-        borderTopRightRadius: 8,
-        borderBottomRightRadius: 8,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-
-    edit_icon: {
-        height: 33,
-        width: 33
     },
 
     backgroundImage_select: {
@@ -306,7 +307,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 25,
         height: 70,
         width: 300,
-        backgroundColor: colors.gray[100],
+        backgroundColor: colors.gray[150],
         borderBottomLeftRadius: 6,
         borderBottomRightRadius: 6
     },
@@ -400,6 +401,28 @@ export const styles = StyleSheet.create({
         gap: 20
     },
 
+    sys_start2: {
+        height: 80,
+        width: 305,
+        backgroundColor: colors.gray[100],
+        borderRadius: 6,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 20
+    },
+
+    sys_start3: {
+        height: 80,
+        width: 305,
+        backgroundColor: colors.ui[500],
+        borderRadius: 6,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 20
+    },
+
     start_text: {
         fontFamily: 'Rubik',
         fontWeight: '800',
@@ -407,7 +430,18 @@ export const styles = StyleSheet.create({
         letterSpacing: 0.5,
         color: colors.gray[150],
         paddingLeft: 20,
+        textShadowOffset: { width: 0, height: 2 },
+        textShadowColor: colors.gray[800],
+        textShadowRadius: 4
+    },
 
+    start_text2: {
+        fontFamily: 'Rubik',
+        fontWeight: '800',
+        fontSize: 16,
+        letterSpacing: 0.5,
+        color: colors.ui[300],
+        paddingLeft: 20,
     },
 
     config_icon: {
@@ -489,11 +523,11 @@ export const styles = StyleSheet.create({
     },
 
     backicon: {
-        width: 10,
-        height: 18,
+        width: 15,
+        height: 23,
         position: 'absolute',
         top: 20,
-        left: 20
+        left: 20,
     },
 
     option_box: {
@@ -505,7 +539,7 @@ export const styles = StyleSheet.create({
         padding: 5,
         borderRadius: 4,
         minHeight: 20,
-        minWidth: 80
+        minWidth: 80,
     },
 
     option_box_text: {
@@ -542,6 +576,41 @@ export const styles = StyleSheet.create({
     sensor_text_container: {
         gap: 20,
         alignContent: 'center'
-    }
+    },
+
+    sensor_tab_container: {
+        gap: 6
+    },
+
+    sensor_tab_container_text: {
+        fontFamily: 'Rubik',
+        fontWeight: '800',
+        fontSize: 14,
+        letterSpacing: 0.5,
+        color: colors.gray[750]
+    },
+
+    progress_bar: {
+        height: 15,
+        borderRadius: 6,
+        borderWidth: 1,
+        borderColor: colors.gray[400]
+    },
+
+    sensor_status_text: {
+        fontFamily: 'Rubik',
+        fontWeight: '800',
+        fontSize: 14,
+        letterSpacing: 0.5,
+        color: colors.ui[75]
+    },
+
+    sensor_status_text_off: {
+        fontFamily: 'Rubik',
+        fontWeight: '800',
+        fontSize: 14,
+        letterSpacing: 0.5,
+        color: colors.ui[500]
+    },
 
 })
