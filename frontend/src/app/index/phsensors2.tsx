@@ -17,10 +17,10 @@ export default function Home() {
                     <Link href={'../select'}><Image style={{ width: 10, height: 18, padding: 5 }} source={require('../../../assets/icons/back.png')} /></Link>
                     <View style={styles.baia_selecionada}>
                         <View style={{ flexDirection: 'row', gap: 4 }}>
-                            <Text style={styles.baia_name}>Baia 1</Text>
-                            <View style={styles.dot_online} />
+                            <Text style={styles.baia_name}>Baia 2</Text>
+                            <View style={styles.dot_offline} />
                         </View>
-                        <Text style={styles.baia_ip}>IP: 000.121.123</Text>
+                        <Text style={styles.baia_ip}>IP: 205.513.078</Text>
                     </View>
                 </View>
                 <Image style={{ width: 26, height: 32 }} source={require('../../../assets/icons/pot.png')} />
@@ -35,7 +35,7 @@ export default function Home() {
                 <View style={{ flexDirection: 'row', gap: 15 }}>
                     <View style={styles.config_tab2}>
                         <View style={styles.sensor_tab_color2} />
-                        <Link style={styles.backicon} href={'../homepage'}>
+                        <Link style={styles.backicon} href={'../homepage2'}>
                             <Image source={require('../../../assets/icons/backalt.png')} />
                         </Link>
                         <View style={{ alignItems: 'center' }}>
@@ -44,16 +44,16 @@ export default function Home() {
                         </View>
                         <View style={styles.sensor_tab_container}>
                             <Text style={styles.sensor_tab_container_text}>Sensor de umidade:</Text>
-                            <ProgressBar progress={0.8} color={colors.ui[300]} style={styles.progress_bar} />
+                            <ProgressBar progress={0} color={colors.ui[300]} style={styles.progress_bar} />
                             <Text style={styles.sensor_tab_container_text}>Nível IUV:</Text>
-                            <ProgressBar progress={0.5} color={colors.ui[600]} style={styles.progress_bar} />
+                            <ProgressBar progress={0} color={colors.ui[600]} style={styles.progress_bar} />
                             <View style={{ flexDirection: 'row', gap: 5 }}>
                                 <Text style={styles.sensor_tab_container_text}>Sensor UV:</Text>
-                                <Text style={styles.sensor_status_text}>OK</Text>
+                                <Text style={styles.sensor_status_text_off}>OFFLINE</Text>
                             </View>
                             <View style={{ flexDirection: 'row', gap: 5 }}>
                                 <Text style={styles.sensor_tab_container_text}>Sensor de umidade:</Text>
-                                <Text style={styles.sensor_status_text}>OK</Text>
+                                <Text style={styles.sensor_status_text_off}>OFFLINE</Text>
                             </View>
                         </View>
                     </View>

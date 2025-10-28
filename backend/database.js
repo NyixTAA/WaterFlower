@@ -8,6 +8,12 @@ db.serialize(() => {
       username TEXT UNIQUE,
       password TEXT
     )
+
+    CREATE TABLE IF NOT EXISTS baias (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      nome text,
+      ip text
+    )
   `);
 });
 
