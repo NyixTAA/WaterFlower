@@ -7,6 +7,19 @@ app.use(cors())
 
 const ESP_IP = "http://192.168.0.105"
 
+let ultimoDado = {}
+
+app.post("/dados", (req, res) => {
+  const dados = req.body
+  console.log("DADOS RECEBIDOS:", dados)
+  ultimoDado = dados;
+  res.send("dados recebidos com sucesso.")
+})
+
+app.get("/dados", (req, res) => {
+  res.json(ultimoDado);
+}
+
 app.get("/iniciar", async (req, res) => {
   try {
     const response = await fetch(`${ESP_IP}/irrigar`)
