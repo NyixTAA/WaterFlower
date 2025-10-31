@@ -1,0 +1,17 @@
+{
+  "name": "irrigacao-server",
+  "version": "1.0.0",
+  "description": "Servidor Node.js para controle de irrigação via ESP8266",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node serverConnection.js"
+  },
+  "author": "Marco Antonio",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
+  }
+}
