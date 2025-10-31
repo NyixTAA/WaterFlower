@@ -1,0 +1,76 @@
+#include <SoftwareSerial.h>
+
+#define RX_ESP 2   // Pino que recebe do ESP (TX do ESP)
+#define TX_ESP 3   // Pino que envia para o ESP (RX do ESP)
+SoftwareSerial esp(RX_ESP, TX_ESP);  // RX, TX
+
+const int rele = 8;
+const int sensor_umidade = A0;
+const int pinSensorUV = A1;
+
+int valorUmidade = 0;
+int leituraUV = 0;
+int indiceUV = 0;
+int indiceUmidade = 0;
+
+bool manualControl = false; // true = modo manual via ESP
+bool solenoideOn = true;
+bool solenoideOff = false;
+
+void setup() {
+  Serial.begin(9600); // comunicação com o PC
+  esp.begin(9600);    // comunicação com o ESP8266
+
+  pinMode(rele, OUTPUT);
+  pinMode(sensor_umidade, INPUT);
+  pinMode(pinSensorUV, INPUT);
+  digitalWrite(rele, solenoideOff);
+
+  Serial.println("Arduino iniciado e aguardando comandos do ESP...");
+}
+
+void loop() {
+  // 🔹 1. Leitura de comandos vindos do ESP
+  if (esp.available() > 0) {
+    String cmd = esp.readStringUntil('\n');
+    cmd.trim();
+
+    if (cmd == "START") {
+      manualControl = true;
+      digitalWrite(rele, solenoideOn);
+      Serial.println("Irrigação manual iniciada (comando do ESP)");
+    }
+    else if (cmd == "STOP") {
+      manualControl = false;
+      digitalWrite(rele, solenoideOff);
+      Serial.println("Irrigação manual parada (comando do ESP)");
+    }
+    else if (cmd == "DADOS") {
+      valorUmidade = analogRead(sensor_umidade);
+      leituraUV = analogRead(pinSensorUV);
+      indiceUV = map(leituraUV, 0, 203, 0, 1);
+      esp.print(valorUmidade);
+    }
+  }
+
+  // 🔹 2. Controle automático (quando não está em modo manual)
+  if (!manualControl) {
+    valorUmidade = analogRead(sensor_umidade);
+    leituraUV = analogRead(pinSensorUV);
+    indiceUV = map(leituraUV, 0, 203, 0, 10);
+
+    Serial.print("Umidade: "); Serial.print(valorUmidade);
+    Serial.print(" | UV: "); Serial.println(indiceUV);
+    if (valorUmidade > 600) {
+      digitalWrite(rele, solenoideOn);
+      Serial.println("Solo seco → irrigando automaticamente");
+      delay(5000); // tempo de irrigação
+      digitalWrite(rele, solenoideOff);
+    } else {
+      digitalWrite(rele, solenoideOff);
+      Serial.println("Solo úmido → não irrigar");
+
+    }
+  }
+  delay(5000);
+}
