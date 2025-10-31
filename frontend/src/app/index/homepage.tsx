@@ -6,16 +6,6 @@ import { useState } from 'react'
 
 export default function Home() {
     const [ativo, setAtivo] = useState(false);
-
-    const handleIrrigacao = () => {
-        if (!ativo) {
-            setAtivo(true);
-            setTimeout(() => {
-                setAtivo(false);
-            }, 5000);
-        }
-    };
-
     return (
         <ImageBackground
             source={require('../../../assets/images/BG_3.png')}
@@ -34,7 +24,6 @@ export default function Home() {
                     <View style={styles.baia_selecionada}>
                         <View style={{ flexDirection: 'row', gap: 4 }}>
                             <Text style={styles.baia_name}>Baia 1</Text>
-                            <View style={styles.dot_online} />
                         </View>
                         <Text style={styles.baia_ip}>IP: 000.121.123</Text>
                     </View>
@@ -53,7 +42,7 @@ export default function Home() {
                         resizeMode='contain'
                     />
                     <Text style={styles.title_home}>
-                        Gerencie a <Text style={styles.sub_home}>Baia 1</Text>
+                        Gerencie a <Text style={styles.sub_home}>Baia</Text>
                     </Text>
                 </View>
             </View>
@@ -83,7 +72,7 @@ export default function Home() {
                     </Link>
                 </View>
 
-                <Pressable onPress={handleIrrigacao} disabled={ativo}>
+                <Pressable onPress={() => setAtivo(!ativo)}>
                     <View style={ativo ? styles.sys_start2 : styles.sys_start}>
                         <Text style={ativo ? styles.start_text2 : styles.start_text}>
                             {ativo ? 'Irrigando...' : 'Iniciar irrigação'}

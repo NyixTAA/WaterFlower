@@ -19,7 +19,6 @@ export default function Home() {
                     <View style={styles.baia_selecionada}>
                         <View style={{ flexDirection: 'row', gap: 4 }}>
                             <Text style={styles.baia_name}>Baia 2</Text>
-                            <View style={styles.dot_offline} />
                         </View>
                         <Text style={styles.baia_ip}>IP: 205.513.078</Text>
                     </View>
@@ -31,7 +30,7 @@ export default function Home() {
                     <Image
                         source={require('../../../assets/images/icon.png')} style={styles.flower_2} resizeMode='contain'
                     />
-                    <Text style={styles.title_home}>Gerencie a <Text style={styles.sub_home}>Baia 2</Text></Text>
+                    <Text style={styles.title_home}>Gerencie a <Text style={styles.sub_home}>Baia</Text></Text>
                 </View>
             </View>
             <View style={styles.tabs_container}>

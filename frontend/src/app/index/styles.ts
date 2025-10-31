@@ -184,13 +184,29 @@ export const styles = StyleSheet.create({
 
     baia: {
         height: 75,
-        width: 312,
+        width: 255,
         backgroundColor: colors.gray[150],
-        borderRadius: 8,
+        borderTopLeftRadius: 8,
+        borderBottomLeftRadius: 8,
         alignItems: 'center',
         gap: 5,
         padding: 15,
         flexDirection: 'row'
+    },
+
+    edit: {
+        height: 75,
+        width: 55,
+        backgroundColor: colors.gray[150],
+        borderTopRightRadius: 8,
+        borderBottomRightRadius: 8,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
+    editIcon: {
+        width: 35,
+        height: 35
     },
 
     bayicon: {
@@ -611,6 +627,56 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         letterSpacing: 0.5,
         color: colors.ui[500]
+    },
+
+    editContainer: {
+        flexDirection: 'row',
+        width: 310,
+        backgroundColor: colors.gray[150],
+        borderRadius: 8,
+        alignItems: 'center',
+    },
+    editBox: {
+        flex: 1,
+        padding: 15,
+        flexDirection: 'column',
+        gap: 10,
+        borderLeftWidth: 2,
+        borderColor: colors.gray[850]
+    },
+    editFields: {
+        gap: 10,
+    },
+    editInput: {
+        backgroundColor: '#fff',
+        borderRadius: 8,
+        borderWidth: 2,
+        borderColor: colors.gray[400],
+        padding: 8,
+        fontFamily: 'Rubik',
+    },
+    confirmCancel: {
+        width: 60,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        borderLeftWidth: 2,
+        borderColor: colors.gray[850],
+        gap: 60
+    },
+    confirmImg: {
+        height: 31,
+        width: 42
+    },
+
+    closeImg: {
+        height: 35,
+        width: 35
+    },
+
+    cancelText: {
+        fontSize: 35,
+        color: colors.ui[500],
+        fontWeight: '900',
     },
 
 })

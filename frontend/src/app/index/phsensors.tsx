@@ -18,7 +18,6 @@ export default function Home() {
                     <View style={styles.baia_selecionada}>
                         <View style={{ flexDirection: 'row', gap: 4 }}>
                             <Text style={styles.baia_name}>Baia 1</Text>
-                            <View style={styles.dot_online} />
                         </View>
                         <Text style={styles.baia_ip}>IP: 000.121.123</Text>
                     </View>
