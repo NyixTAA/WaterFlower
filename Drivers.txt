@@ -4,4 +4,8 @@ https://sparks.gogo.co.nz/ch340.html
 
 No arduino ide
 
+
 http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+Atualizar o node:
+https://nodejs.org/pt/download
