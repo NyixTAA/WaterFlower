@@ -83,37 +83,6 @@ WaterFlower/
 - Expo CLI
 - Arduino IDE
 
-## Instalação e execução
-
-### 1) Backend
-
-```bash
-cd backend
-npm install
-node server.js
-```
-
-O backend expõe endpoints para login e controle das baías/zonas irrigadas.
-
-### 2) Frontend
-
-```bash
-cd frontend
-npm install
-npm start
-```
-
-A aplicação pode ser executada em emulador, dispositivo físico ou navegador web, conforme a configuração do Expo.
-
-### 3) Hardware
-
-O código do Arduino está em `arduino.txt` e foi projetado para:
-- ler umidade e níveis UV;
-- receber comandos do ESP;
-- ligar/desligar o relé conforme o controle automático ou manual.
-
-O ESP/Node também recebe e envia informações para o servidor local, permitindo integração com a aplicação.
-
 ## Como funciona
 
 1. O sensor de umidade mede o nível do solo.
