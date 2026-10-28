@@ -4,7 +4,7 @@ Sistema de irrigação inteligente para monitoramento e controle do solo, com se
 
 ## Visão geral
 
-O WaterFlower foi desenvolvido para automatizar a irrigação de plantas ou áreas pequenas de cultivo, reduzindo o desperdício de água e permitindo o controle manual ou automático do sistema.
+O WaterFlower foi um TCC (Trabalho de Conclusão de Curso) desenvolvido para automatizar a irrigação de plantas ou áreas pequenas de cultivo, reduzindo o desperdício de água e permitindo o controle manual ou automático do sistema. A ideia surgiu a partir da necessidade de automação de uma pequena horta próxima à ETEC Prof. Camargo Aranha chamada "Horta das flores", a fim de reduzir a demanda e aumentar a precisão da irrigação nas hortaliças, aumentando, assim, a produtividade nas demais áreas da horta.
 
 O projeto combina:
 - Arduino para leitura dos sensores e acionamento do relé;
@@ -121,19 +121,3 @@ O ESP/Node também recebe e envia informações para o servidor local, permitind
 3. O backend valida os dados e disponibiliza as informações para o frontend.
 4. Se a umidade estiver baixa, o sistema aciona a irrigação.
 5. O usuário também pode controlar manualmente a irrigação pelo app.
-
-## Observações
-
-Este projeto inclui arquivos de desenvolvimento, protótipos e versões finais dentro do repositório, então é possível encontrar diferentes configurações e telas em arquivos com nomes alternados, como `homepage.tsx`, `homepage2.tsx`, `phconfig.tsx` e `phsensors2.tsx`.
-
-## Licença
-
-Este projeto está disponível para fins de estudo e demonstração. Consulte os arquivos de configuração e os autores do código para uso em produção.
-
-## Contato
-
-Projeto desenvolvido por Marco Antonio.
-
----
-
-Se quiser, posso também criar uma versão mais profissional do README em inglês ou adaptar o texto para um formato de apresentação acadêmica, GitHub e portfolio.
